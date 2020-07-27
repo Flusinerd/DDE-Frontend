@@ -4,13 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { NgTerminalModule } from 'ng-terminal';
+import { TerminalComponent } from './terminal/terminal.component';
+
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocketIoModule.forRoot(config),
+    NgTerminalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

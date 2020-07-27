@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dde"
+    }
+  },
+  "defaultProject": "dde",
+  "cli": {
+    "analytics": "6cdae1ef-f24a-4256-9ab8-ba3b2681091f"
+  }
 }
