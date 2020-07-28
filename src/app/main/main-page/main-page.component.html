@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <div>
+    <button mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="app-name">Docker Development Environment</h1>
+  </div>
+
+  <span class="clock" >{{currentTime}}</span>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" class="app-sidenav">
+    
+    <mat-nav-list class="sidenav-list">
+
+      <div>
+        <h2 matSubheader class="list-header">Verfügbare Pods</h2>
+        <a mat-list-item class="list-item">Pod 1</a>
+        <a mat-list-item class="list-item">Pod 1</a>
+        <a mat-list-item class="list-item">Pod 1</a>
+        <a mat-list-item class="list-item">Pod 1</a>
+        <a mat-list-item class="list-item">Pod 1</a>
+      </div>
+        
+      <!-- <mat-divider></mat-divider> -->
+      <div>
+        <h2 matSubheader class="list-header">Verwaltung</h2>
+        <a mat-list-item class="list-item">Ausloggen</a>
+      </div>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

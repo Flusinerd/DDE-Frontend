@@ -1,5 +1,4 @@
-<router-outlet></router-outlet>
-<div>
-  Terminal
-  <app-terminal></app-terminal>
+<div class="loading-container" *ngIf="_loadingService.loading">
+  <mat-spinner></mat-spinner>
 </div>
+<router-outlet></router-outlet>
